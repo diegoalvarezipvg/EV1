@@ -144,12 +144,10 @@ app.post("/api/reminders", verifyAuth, (req, res) => {
 });
 
 app.patch("/api/reminders/:id", verifyAuth, (req, res) => {
-    // Validación del ID
     if (!req.params.id || typeof req.params.id !== "string" || req.params.id.trim() === "") {
         return res.status(400).json({ message: "ID inválido" });
     }
 
-    // Validación del body
     if (!req.body || typeof req.body !== "object") {
         return res.status(400).json({ message: "El body debe ser un objeto JSON" });
     }
@@ -161,7 +159,6 @@ app.patch("/api/reminders/:id", verifyAuth, (req, res) => {
 
     const { content, important } = req.body;
     
-    // Validación de content
     if (content !== undefined) {
         if (typeof content !== 'string' || content.trim().length === 0 || content.length > 120) {
             return res.status(400).json({ message: 'Invalid content. Must be a non-empty string with max 120 characters' });
@@ -169,7 +166,6 @@ app.patch("/api/reminders/:id", verifyAuth, (req, res) => {
         reminder.content = content.trim();
     }
 
-    // Validación de important
     if (important !== undefined) {
         if (typeof important !== 'boolean') {
             return res.status(400).json({ message: 'Important must be a boolean value' });
@@ -177,7 +173,6 @@ app.patch("/api/reminders/:id", verifyAuth, (req, res) => {
         reminder.important = important;
     }
 
-    // Verificar si al menos un campo fue actualizado
     if (content === undefined && important === undefined) {
         return res.status(400).json({ message: "Debe proporcionar al menos un campo para actualizar" });
     }
@@ -197,8 +192,8 @@ app.delete("/api/reminders/:id", verifyAuth, (req, res) => {
     res.status(204).send();
 });
 
-app.listen(3000, () => {
-    console.log("Server is running on port 3000");
+app.listen(3300, () => {
+    console.log("Server is running on port 3300");
 });
 
 
@@ -209,7 +204,7 @@ app.listen(3000, () => {
 
     curl -X GET http://localhost:3000/api/reminders -H "x-authorization: 1234567890"
 
-    curl -X POST http://localhost:3000/api/reminders -H "Content-Type: application/json" -H "x-authorization: 1234567890" -d "{\"content\": \"test\", \"important\": true}"
+    curl -X POST http://localhost:3000/api/reminders -H "Content-Type: application/json" -H "x-authorization: "0a7dba3b1e03c645670fcc75ae418182af6e7a457bf5d8221e85aae4280d7cf3fc22d5a3d6086c0a03d34eed8de9a6dd" -d "{\"content\": \"test\", \"important\": true}"
 
     curl -X PATCH http://localhost:3000/api/reminders/1234567890 -H "Content-Type: application/json" -H "x-authorization: 1234567890" -d "{\"content\": \"test2\", \"important\": false}"
 
