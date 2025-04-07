@@ -2,14 +2,39 @@
   "name": "reminder-api",
   "version": "1.0.0",
   "type": "module",
-  "description": "Reminder API with authentication",
+  "description": "Sistema de gestión de recordatorios con autenticación de usuarios",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "node index.js --watch"
   },
+  "keywords": [
+    "reminders",
+    "express",
+    "node",
+    "authentication",
+    "api",
+    "tokens"
+  ],
+  "author": {
+    "name": "Diego Alvarez",
+    "email": "diego.alvarez4@virginiogomez.cl",
+    "url": "https://github.com/diegoalvarezipvg"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegoalvarezipvg/EV1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/diegoalvarezipvg/EV1/issues"
+  },
+  "homepage": "https://github.com/diegoalvarezipvg/EV1#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }

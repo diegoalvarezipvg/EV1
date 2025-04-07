@@ -44,6 +44,7 @@ Esta aplicación es un sistema de gestión de recordatorios con autenticación d
 /
 ├── index.js           # Servidor Express y lógica de la API
 ├── package.json       # Dependencias y scripts
+├── LICENSE            # Licencia MIT
 ├── public/            # Archivos estáticos
 │   ├── index.html     # Página principal
 │   ├── app.js         # Lógica del cliente
@@ -142,3 +143,11 @@ curl -X DELETE http://localhost:3300/api/reminders/ID_DEL_RECORDATORIO -H "x-aut
 - La aplicación está diseñada para ser ejecutada en un entorno de desarrollo
 - El estado se mantiene en memoria, por lo que se reiniciará al reiniciar el servidor
 - Para un entorno de producción, se recomienda implementar una base de datos y medidas de seguridad adicionales
+
+## Autor
+
+**Diego Alvarez Cisternas** - [GitHub](https://github.com/diegoalvarezipvg/EV1)
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
