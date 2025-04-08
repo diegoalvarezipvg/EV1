@@ -110,13 +110,13 @@ Esta aplicación es un sistema de gestión de recordatorios con autenticación d
 Para probar la aplicación, puedes usar el siguiente usuario:
 
 - **Usuario**: admin
-- **Contraseña**: admin123
+- **Contraseña**: certamen123
 
 ## Ejemplos de Uso con cURL
 
 ```bash
 # Login
-curl -X POST http://localhost:3300/api/auth/login -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"admin123\"}"
+curl -X POST http://localhost:3300/api/auth/login -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"certamen123\"}"
 
 # Obtener recordatorios
 curl -X GET http://localhost:3300/api/reminders -H "x-authorization: TU_TOKEN"
