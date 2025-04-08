@@ -16,8 +16,9 @@ admin/admin123
 const users = [
     {
         username: "admin",
-        name: "Administrator",
-        password: "8771f93670175ca4c9fe70e5d89837b1:8b2fd7943b5222ce7f698dfc11c39fbc88a4df6f08a430d9a7fd6efa889a06362f90353c6948cd784a776f31a59ac96292b2ed9dafcc5826283b69d5242af030"
+        name: "Gustavo Alfredo Marín Sáez",
+        password: "1b6ce880ac388eb7fcb6bcaf95e20083:341dfbbe86013c940c8e898b437aa82fe575876f2946a2ad744a0c51501c7dfe6d7e5a31c58d2adc7a7dc4b87927594275ca235276accc9f628697a4c00b4e01"
+        //password: "8771f93670175ca4c9fe70e5d89837b1:8b2fd7943b5222ce7f698dfc11c39fbc88a4df6f08a430d9a7fd6efa889a06362f90353c6948cd784a776f31a59ac96292b2ed9dafcc5826283b69d5242af030"
     }
 ];
 
